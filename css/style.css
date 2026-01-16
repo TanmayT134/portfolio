@@ -860,6 +860,18 @@ section:nth-child(odd) .animate.scroll {
 }
 
 @media (max-width: 991px) {
+    .home {
+        background-position: 85% center;
+    }
+
+    .home-imgHover {
+        pointer-events: none;
+    }
+
+    .animate.home-img {
+        width: 58%;
+    }
+
     .header {
         padding: 2rem 4%;
     }
@@ -879,7 +891,7 @@ section:nth-child(odd) .animate.scroll {
 
 @media (max-width: 850px) {
     .animate.home-img {
-        width: 55%;
+        width: 62%;
     }
 }
 
@@ -942,10 +954,22 @@ section:nth-child(odd) .animate.scroll {
         transition-delay: .25s;
     }
 
+    .animate.home-img {
+        width: 70%;
+    }
+
     .home-imgHover {
         pointer-events: none;
+        width: 70%;
         background: var(--bg-color);
         opacity: .6;
+    }
+}
+
+@media (max-width: 728px) {
+    .home {
+        background-image: none;
+        background-color: var(--bg-color);
     }
 }
 
