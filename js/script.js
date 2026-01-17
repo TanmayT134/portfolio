@@ -65,12 +65,12 @@ contactForm.addEventListener('submit', function (e) {
         'template_oq029u6',
         this
     )
-    .then(() => {
-        alert('Message sent successfully!');
-        contactForm.reset();
-    })
-    .catch((error) => {
-        console.error('EmailJS Error:', error);
-        alert('Something went wrong. Please try again.');
-    });
+        .then(() => {
+            alert('Message sent successfully!');
+            contactForm.reset();
+        })
+        .catch((error) => {
+            console.error('EmailJS Error:', error);
+            alert('Something went wrong. Please try again.');
+        });
 });

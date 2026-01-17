@@ -450,7 +450,6 @@ span {
 }
 
 .skills {
-    /* min-height: auto; */
     padding-bottom: 7rem;
     background: var(--second-bg-color);
 }
@@ -486,7 +485,7 @@ span {
     position: relative;
     border: .2rem solid var(--main-color);
     border-radius: .6rem;
-    padding: .5rem 1.5rem;
+    padding: 1.5rem 1.8rem;
     z-index: 1;
     overflow: hidden;
 }
@@ -507,65 +506,28 @@ span {
     width: 100%;
 }
 
-.skills-content .progress {
-    padding: 1rem 0;
-}
-
-.skills-content .progress h3 {
-    font-size: 1.7rem;
+.skills-grouped {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.8rem;
 }
 
-.skills-content .progress h3 span {
-    color: var(--text-color);
+.skill-group {
+    position: relative;
+    padding-left: 1.2rem;
+    border-left: .3rem solid var(--main-color);
 }
 
-.skills-content .progress .bar {
-    height: 2.5rem;
-    border-radius: .6rem;
-    border: .2rem solid var(--main-color);
-    padding: .5rem;
-    margin: 1rem 0;
+.skill-group h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: .4rem;
 }
 
-.skills-content .progress .bar span {
-    display: block;
-    height: 100%;
-    border-radius: .3rem;
-    background: var(--main-color);
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-    width: 90%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 75%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 65%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 75%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 85%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 80%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 80%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 95%;
+.skill-group p {
+    font-size: 1.5rem;
+    line-height: 1.6;
 }
 
 .projects {
@@ -660,7 +622,7 @@ span {
     width: 0;
 }
 
-.projects .btn-box.btns{
+.projects .btn-box.btns {
     position: relative;
     width: 100%;
     display: flex;
@@ -669,7 +631,7 @@ span {
     margin-top: 5rem;
 }
 
-.projects .btn-box.btns a::before{
+.projects .btn-box.btns a::before {
     background: var(--bg-color);
 }
 
