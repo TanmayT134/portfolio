@@ -687,50 +687,69 @@ button {
 .menu-toggle {
     display: none;
 
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
 
     place-items: center;
 
     position: relative;
 
-    background:
-        rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
 
-    border:
-        1px solid rgba(255, 255, 255, 0.12);
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #fff;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s var(--ease);
 }
 
 .menu-toggle span {
     position: absolute;
 
-    width: 17px;
-    height: 1px;
+    width: 18px;
+    height: 1.5px;
 
-    background: #fff;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.9);
 
     transition:
-        transform 0.35s var(--ease);
+        transform 0.4s var(--ease),
+        opacity 0.25s ease;
 }
 
 .menu-toggle span:first-child {
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
 }
 
 .menu-toggle span:last-child {
-    transform:
-        translateY(4px);
+    transform: translateY(4px);
 }
 
+/* OPEN → X */
+
 .navbar.menu-open .menu-toggle span:first-child {
-    transform:
-        rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .navbar.menu-open .menu-toggle span:last-child {
-    transform:
-        rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.menu-toggle:active {
+    transform: scale(0.94);
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
 }
 
 
@@ -4694,7 +4713,7 @@ button {
 
     .hero {
         padding:
-            130px 0 55px;
+            190px 0 55px;
     }
 
     .hero-layout {
@@ -4800,61 +4819,100 @@ button {
         font-size: 7px;
     }
 
-    .orbit-wrap {
-        min-height: 360px;
+    /* =====================================================
+       MOBILE ORBIT
+    ====================================================== */
 
-        margin-top: 5px;
+    .orbit-wrap {
+        width: 100%;
+
+        min-height: 365px;
+
+        margin-top: 10px;
+
+        display: grid;
+        place-items: center;
+
+        overflow: visible;
     }
 
     .orbit {
-        width: 380px;
-        height: 380px;
+        width: min(350px, calc(100vw - 30px));
+        height: min(350px, calc(100vw - 30px));
+
+        transform: none;
     }
 
+    /* -----------------------------------------
+       CENTER CORE
+    ----------------------------------------- */
+
     .core {
-        width: 180px;
-        height: 180px;
+        width: clamp(155px, 43vw, 175px);
+        height: clamp(155px, 43vw, 175px);
+
+        padding: 15px;
     }
 
     .core strong {
-        font-size: 42px;
+        font-size: clamp(27px, 8vw, 34px);
+
+        line-height: 1;
+
+        white-space: nowrap;
+
+        letter-spacing: -0.04em;
     }
 
     .core small {
-        margin-top: 11px;
+        margin-top: 10px;
 
-        font-size: 6px;
+        font-size: 5.5px;
 
-        letter-spacing: 0.25em;
+        letter-spacing: 0.24em;
+
+        white-space: nowrap;
     }
 
+    /* -----------------------------------------
+       ORBIT RINGS
+    ----------------------------------------- */
+
     .r1 {
-        width: 260px;
-        height: 260px;
+        width: 235px;
+        height: 235px;
     }
 
     .r2 {
-        width: 310px;
-        height: 225px;
+        width: 285px;
+        height: 215px;
     }
 
     .r3 {
-        width: 225px;
-        height: 310px;
+        width: 215px;
+        height: 285px;
     }
 
+    /* -----------------------------------------
+       TECHNOLOGY BADGES
+    ----------------------------------------- */
+
     .orbit-tech {
-        min-width: 115px;
+        min-width: 100px;
+        max-width: 104px;
 
-        gap: 8px;
+        padding: 7px 8px;
 
-        padding:
-            8px 9px;
+        gap: 7px;
+
+        border-radius: 8px;
     }
 
     .orbit-tech .tech-icon {
         width: 28px;
         height: 28px;
+
+        flex: 0 0 28px;
     }
 
     .tech-icon svg {
@@ -4863,26 +4921,52 @@ button {
     }
 
     .orbit-tech strong {
-        font-size: 10px;
+        font-size: 9px;
+
+        line-height: 1.1;
+
+        white-space: nowrap;
     }
 
     .orbit-tech span {
+        margin-top: 2px;
+
         font-size: 5px;
+
+        line-height: 1;
+
+        letter-spacing: 0.1em;
+
+        white-space: nowrap;
     }
 
+    /* -----------------------------------------
+       BADGE POSITIONS
+    ----------------------------------------- */
+
     .react {
-        top: 40px;
-        right: -5px;
+        top: 0;
+
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
     }
 
     .ai {
-        left: -4px;
-        top: 44%;
+        left: 0;
+
+        top: 50%;
+
+        transform: translateY(-50%);
     }
 
     .java {
-        bottom: 30px;
-        left: 8%;
+        bottom: 0;
+
+        left: 50%;
+
+        transform: translateX(-50%);
     }
 
     .orb-dot {
@@ -5285,8 +5369,38 @@ button {
     }
 
     .orbit {
-        transform:
-            scale(0.88);
+        width: min(325px, calc(100vw - 24px));
+        height: min(325px, calc(100vw - 24px));
+        transform: none;
+    }
+
+    .core {
+        width: 145px;
+        height: 145px;
+    }
+
+    .core strong {
+        font-size: 27px;
+    }
+
+    .tech-badge {
+        min-width: 94px;
+        max-width: 98px;
+        padding: 6px 7px;
+    }
+
+    .tech-icon {
+        width: 25px;
+        height: 25px;
+        flex-basis: 25px;
+    }
+
+    .tech-info strong {
+        font-size: 8px;
+    }
+
+    .tech-info span {
+        font-size: 4.5px;
     }
 
     .orbit-wrap {
