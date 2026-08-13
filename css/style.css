@@ -4516,91 +4516,157 @@ button {
    MOBILE
 ========================================================= */
 
+/* =========================================================
+   MOBILE ORBIT — CLEAN RESPONSIVE LAYOUT
+========================================================= */
+
 @media (max-width: 760px) {
 
     .orbit-wrap {
-        min-height: 430px;
+        width: 100%;
+        min-height: clamp(310px, 94vw, 370px);
+        margin-top: 18px;
         overflow: visible;
+
+        display: grid;
+        place-items: center;
     }
 
     .orbit {
-        width: 470px;
-        height: 470px;
+        width: min(360px, calc(100vw - 24px));
+        height: min(360px, calc(100vw - 24px));
 
-        transform: scale(0.72);
+        transform: none;
+        flex-shrink: 0;
     }
 
+    /* Smaller orbital rings */
+    .r1 {
+        width: 210px;
+        height: 210px;
+    }
+
+    .r2 {
+        width: 270px;
+        height: 205px;
+    }
+
+    .r3 {
+        width: 205px;
+        height: 270px;
+    }
+
+    /* Central TanmayT sphere */
     .core {
-        width: 235px;
-        height: 235px;
+        width: clamp(145px, 42vw, 165px);
+        height: clamp(145px, 42vw, 165px);
     }
 
     .core strong {
-        font-size: 40px;
+        font-size: clamp(27px, 8vw, 34px);
     }
 
     .core small {
-        font-size: 7px;
+        margin-top: 9px;
+
+        font-size: clamp(5px, 1.6vw, 7px);
+        letter-spacing: 0.25em;
     }
 
+    /* Technology badges */
     .tech-badge {
-        min-width: 132px;
-        padding: 9px 11px;
-        gap: 9px;
+        min-width: 104px;
+        max-width: 108px;
+
+        padding: 7px 8px;
+        gap: 7px;
+
+        border-radius: 8px;
     }
 
     .tech-icon {
-        width: 36px;
-        height: 36px;
-        flex-basis: 36px;
+        width: 30px;
+        height: 30px;
+        flex-basis: 30px;
     }
 
     .tech-icon i {
-        font-size: 19px;
+        font-size: 16px;
+    }
+
+    .ai-icon {
+        font-size: 18px;
+    }
+
+    .tech-info {
+        min-width: 0;
     }
 
     .tech-info strong {
-        font-size: 12px;
+        font-size: 10px;
+        line-height: 1.1;
+        white-space: nowrap;
     }
 
     .tech-info span {
-        font-size: 6px;
+        margin-top: 3px;
+
+        font-size: 5px;
+        line-height: 1.1;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
     }
 
+    /* Top */
+    .badge-react {
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Upper left */
     .badge-python {
-        left: 10px;
-        top: 90px;
+        top: 55px;
+        left: 0;
     }
 
+    /* Upper right */
     .badge-node {
+        top: 55px;
         right: 0;
-        top: 90px;
     }
 
+    /* Middle left */
     .badge-mysql {
-        left: -20px;
+        top: 50%;
+        left: -4px;
+        transform: translateY(-50%);
     }
 
+    /* Middle right */
     .badge-mongodb {
-        right: -20px;
+        top: 50%;
+        right: -4px;
+        transform: translateY(-50%);
     }
 
+    /* Lower left */
     .badge-ai {
-        left: 15px;
-        bottom: 90px;
+        bottom: 55px;
+        left: 0;
     }
 
+    /* Lower right */
     .badge-git {
-        right: 15px;
-        bottom: 90px;
+        bottom: 55px;
+        right: 0;
     }
 
+    /* Bottom */
     .badge-java {
         bottom: 5px;
-    }
-
-    .badge-react {
-        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -5268,6 +5334,21 @@ button {
 /* =========================================
    PREMIUM LOADING SCREEN
 ========================================= */
+
+/* =========================================================
+   SCROLL LOCK WHILE LOADING
+========================================================= */
+
+html:has(body.is-loading),
+body.is-loading {
+    overflow: hidden;
+    height: 100%;
+}
+
+body.is-loading {
+    overscroll-behavior: none;
+    touch-action: none;
+}
 
 .loader {
     position: fixed;

@@ -7,8 +7,14 @@
   const percent = document.getElementById("loader-percent");
   const progress = document.getElementById("loader-progress");
   const status = document.getElementById("loader-status");
+  const body = document.body;
 
   if (!loader) return;
+
+  /*
+   * Lock page scrolling while the loading screen is active.
+   */
+  body.classList.add("is-loading");
 
   const messages = [
     "INITIALIZING EXPERIENCE",
@@ -134,6 +140,12 @@
          */
         setTimeout(() => {
           loader.remove();
+
+          /*
+           * Loading screen is completely gone.
+           * Restore normal page scrolling.
+           */
+          body.classList.remove("is-loading");
         }, 1100);
 
       }, 150);
