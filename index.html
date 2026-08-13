@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Tanmay Tawade — AI & Full-Stack Developer portfolio.">
+
+    <meta name="theme-color" content="#050505">
+
+    <title>TanmayT. — AI & Full-Stack Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         GLOBAL UI
+    ====================================================== -->
+
+    <!-- =========================================
+     LOADING SCREEN
+========================================= -->
+
+    <div class="loader" id="loader">
+
+        <div class="loader-inner">
+
+            <div class="loader-brand">
+                TanmayT<span>.</span>
+            </div>
+
+            <div class="loader-meta">
+                <span>PORTFOLIO</span>
+                <span id="loader-percent">0%</span>
+            </div>
+
+            <div class="loader-line">
+                <div class="loader-progress" id="loader-progress"></div>
+            </div>
+
+            <div class="loader-status" id="loader-status">
+                INITIALIZING EXPERIENCE
+            </div>
+
+        </div>
+
+        <div class="loader-corner loader-corner-top">
+            <span>TT / 2026</span>
+        </div>
+
+        <div class="loader-corner loader-corner-bottom">
+            <span>BUILD / LEARN / REPEAT</span>
+        </div>
+
+    </div>
+
+    <div class="noise"></div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <div class="page-progress">
+        <span></span>
+    </div>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar" id="navbar">
+
+        <a class="brand magnetic" href="#home" aria-label="TanmayT. Home">
+            TanmayT.
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+
+            <a href="#home" data-section="home">
+                Home
+            </a>
+
+            <a href="#about" data-section="about">
+                About
+            </a>
+
+            <a href="#skills" data-section="skills">
+                Skills
+            </a>
+
+            <a href="#projects" data-section="projects">
+                Projects
+            </a>
+
+            <a href="#certifications" data-section="certifications">
+                Certifications
+            </a>
+
+            <a href="#experience" data-section="experience">
+                Experience
+            </a>
+
+            <a href="#beyond" data-section="beyond">
+                Beyond Code
+            </a>
+
+            <a href="#contact" data-section="contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="navbar-actions">
+
+            <!-- Resume split button -->
+
+            <div class="resume-orb magnetic">
+
+                <a href="assets/Tanmay_Pramod_Tawade_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                    class="resume-main">
+                    <span class="resume-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h7l4 4v14H7z" />
+                            <path d="M14 3v5h5" />
+                            <path d="M10 13h5" />
+                            <path d="M10 16h5" />
+                        </svg>
+                    </span>
+
+                    <span class="resume-text">
+                        <small>MY</small>
+                        <strong>Resume</strong>
+                    </span>
+                </a>
+
+                <a href="assets/Tanmay_Pramod_Tawade_Resume.pdf" download class="resume-download"
+                    aria-label="Download resume">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 4v11" />
+                        <path d="m8 11 4 4 4-4" />
+                        <path d="M5 20h14" />
+                    </svg>
+                </a>
+
+            </div>
+
+
+            <a class="talk magnetic" href="#contact">
+                <span>Let's Talk</span>
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 4 4 10l6 3 3 6 7-15Z" />
+                    <path d="m10 13 5-5" />
+                </svg>
+            </a>
+
+
+            <!-- Mobile menu button -->
+
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+    ====================================================== -->
+
+    <div class="mobile-menu">
+
+        <nav aria-label="Mobile navigation">
+
+            <a href="#home" data-section="home">
+                <span>01</span>
+                Home
+            </a>
+
+            <a href="#about" data-section="about">
+                <span>02</span>
+                About
+            </a>
+
+            <a href="#skills" data-section="skills">
+                <span>03</span>
+                Skills
+            </a>
+
+            <a href="#projects" data-section="projects">
+                <span>04</span>
+                Projects
+            </a>
+
+            <a href="#experience" data-section="experience">
+                <span>05</span>
+                Experience
+            </a>
+
+            <a href="#beyond" data-section="beyond">
+                <span>06</span>
+                Beyond Code
+            </a>
+
+            <a href="#contact" data-section="contact">
+                <span>07</span>
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="mobile-menu-footer">
+
+            <a href="assets/Tanmay_Pramod_Tawade_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                View Resume ↗
+            </a>
+
+            <a href="assets/Tanmay_Pramod_Tawade_Resume.pdf" download>
+                Download Resume ↓
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero section" id="home" data-nav-section="home">
+
+            <div class="grid"></div>
+
+            <div class="glow"></div>
+
+            <div class="hero-layout">
+
+
+                <!-- HERO LEFT -->
+
+                <div class="hero-copy reveal">
+
+                    <div class="availability">
+
+                        <i></i>
+
+                        <span>
+                            AVAILABLE FOR OPPORTUNITIES
+                        </span>
+
+                        <b></b>
+
+                    </div>
+
+
+                    <p class="eyebrow">
+                        HELLO, I'M
+                    </p>
+
+
+                    <div class="name">
+
+                        <h1>
+                            Tanmay
+                        </h1>
+
+                        <h1>
+                            Tawade.
+                        </h1>
+
+                    </div>
+
+
+                    <p class="hero-desc">
+
+                        <strong>
+                            An AI & full-stack developer
+                        </strong>
+
+                        building intelligent, scalable digital
+                        experiences where thoughtful engineering
+                        meets expressive design.
+
+                    </p>
+
+
+                    <div class="actions">
+
+                        <a class="primary magnetic" href="#projects">
+                            <span>
+                                View selected work
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 12h13" />
+                                <path d="m13 6 6 6-6 6" />
+                            </svg>
+                        </a>
+
+
+                        <a class="secondary magnetic" href="#contact">
+                            <span>
+                                Let's connect
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 12h13" />
+                                <path d="m13 6 6 6-6 6" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-meta">
+
+                        <span>
+                            AI / FULL-STACK
+                        </span>
+
+                        <i></i>
+
+                        <span>
+                            PUNE, INDIA
+                        </span>
+
+                        <i></i>
+
+                        <span>
+                            2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO RIGHT / ORBIT -->
+
+                <div class="orbit-wrap reveal">
+                    <div class="orbit">
+
+                        <!-- Ambient glow -->
+                        <div class="orbit-glow"></div>
+
+                        <!-- Orbital rings -->
+                        <div class="ring r1"></div>
+                        <div class="ring r2"></div>
+                        <div class="ring r3"></div>
+
+                        <!-- Center -->
+                        <div class="core">
+                            <strong>TanmayT.</strong>
+                            <small>BUILD / LEARN / REPEAT</small>
+                        </div>
+
+                        <!-- Technology badges -->
+
+                        <div class="tech-badge badge-react">
+                            <div class="tech-icon">
+                                <i class="devicon-react-original"></i>
+                            </div>
+                            <div class="tech-info">
+                                <strong>React</strong>
+                                <span>FRONTEND</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-badge badge-python">
+                            <div class="tech-icon">
+                                <i class="devicon-python-plain"></i>
+                            </div>
+                            <div class="tech-info">
+                                <strong>Python</strong>
+                                <span>AI / BACKEND</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-badge badge-node">
+                            <div class="tech-icon">
+                                <i class="devicon-nodejs-plain"></i>
+                            </div>
+                            <div class="tech-info">
+                                <strong>Node.js</strong>
+                                <span>BACKEND</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-badge badge-mysql">
+                            <div class="tech-icon">
+                                <i class="devicon-mysql-original"></i>
+                            </div>
+                            <div class="tech-info">
+                                <strong>MySQL</strong>
+                                <span>DATABASE</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-badge badge-mongodb">
+                            <div class="tech-icon">
+                                <i class="devicon-mongodb-plain"></i>
+                            </div>
+                            <div class="tech-info">
+                                <strong>MongoDB</strong>
+                                <span>DATABASE</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-badge badge-java">
+                            <div class="tech-icon">
+                                <i class="devicon-java-plain"></i>
+                            </div>
+                            <div class="tech-info">
+                                <strong>Java</strong>
+                                <span>SOFTWARE</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-badge badge-git">
+                            <div class="tech-icon">
+                                <i class="devicon-git-plain"></i>
+                            </div>
+                            <div class="tech-info">
+                                <strong>Git</strong>
+                                <span>VERSION CONTROL</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-badge badge-ai">
+                            <div class="tech-icon ai-icon">
+                                ✦
+                            </div>
+                            <div class="tech-info">
+                                <strong>AI / ML</strong>
+                                <span>INTELLIGENCE</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section class="about section" id="about" data-nav-section="about">
+
+            <div class="shell">
+
+                <div class="label reveal">
+                    <i></i>
+                    ABOUT
+                </div>
+
+
+                <div class="about-layout">
+
+
+                    <div class="about-main reveal">
+
+                        <p class="section-index">
+                            01 / ABOUT ME
+                        </p>
+
+                        <h2 class="display">
+
+                            Curious by nature.
+
+                            <span>
+                                Precise by craft.
+                            </span>
+
+                        </h2>
+
+
+                        <div class="accent"></div>
+
+
+                        <div class="copy">
+
+                            <p>
+                                I'm Tanmay Tawade, an AI & Full-Stack
+                                Developer passionate about building modern
+                                web applications and intelligent software
+                                solutions.
+                            </p>
+
+                            <p>
+                                I enjoy transforming ideas into polished
+                                digital products by combining strong
+                                engineering, problem-solving and clean
+                                user experiences.
+                            </p>
+
+                            <p>
+                                My work spans artificial intelligence,
+                                computer vision, full-stack development,
+                                Java software engineering and
+                                database-driven applications.
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-actions">
+
+                            <a class="outline-button magnetic" href="assets/Tanmay_Pramod_Tawade_Resume.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                <span>View Resume</span>
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M5 12h13" />
+                                    <path d="m13 6 6 6-6 6" />
+                                </svg>
+                            </a>
+
+                            <a class="text-button magnetic" href="assets/Tanmay_Pramod_Tawade_Resume.pdf" download>
+                                Download PDF
+                                <span>↓</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <aside class="about-aside reveal">
+
+                        <div class="quote-mark">
+                            “
+                        </div>
+
+                        <blockquote>
+                            Good software is invisible.
+                            Great software leaves a feeling.
+                        </blockquote>
+
+                        <div class="quote-meta">
+                            <i></i>
+                            A PRINCIPLE I'M LEARNING EVERY DAY
+                        </div>
+
+
+                        <div class="about-focus">
+
+                            <span>
+                                CURRENT FOCUS
+                            </span>
+
+                            <strong>
+                                AI systems + full-stack products
+                            </strong>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+
+                <div class="stats reveal">
+
+                    <div>
+                        <strong>14+</strong>
+                        <span>
+                            PUBLIC<br>
+                            PROJECTS
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>15+</strong>
+                        <span>
+                            TECHNOLOGIES<br>
+                            USED
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>01</strong>
+                        <span>
+                            INTERNSHIP<br>
+                            EXPERIENCE
+                        </span>
+                    </div>
+
+                    <div class="learning">
+
+                        <span>
+                            CURRENTLY LEARNING
+                        </span>
+
+                        <strong>
+                            System design
+                            <em>+</em>
+                            scalable AI
+                            applications
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SKILLS
+        ================================================== -->
+
+        <section class="skills section" id="skills" data-nav-section="skills">
+
+            <div class="shell">
+
+                <div class="label reveal">
+                    <i></i>
+                    SKILLS
+                </div>
+
+
+                <div class="skills-heading reveal">
+
+                    <div>
+
+                        <p class="section-index">
+                            02 / TECHNICAL STACK
+                        </p>
+
+                        <h2 class="display">
+                            Tools I use.
+                            <span>
+                                Systems I build.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        A practical stack built across AI,
+                        full-stack development, Java software
+                        engineering, databases and deployment.
+                    </p>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+
+                    <!-- Languages -->
+
+                    <article class="skill-card reveal">
+
+                        <div class="skill-top">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div class="skill-symbol">
+                                &lt;/&gt;
+                            </div>
+
+                        </div>
+
+                        <p class="skill-category">
+                            LANGUAGES
+                        </p>
+
+                        <h3>
+                            Core programming
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Java</span>
+                            <span>Python</span>
+                            <span>C</span>
+                            <span>SQL</span>
+                            <span>JavaScript</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Frontend -->
+
+                    <article class="skill-card reveal">
+
+                        <div class="skill-top">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div class="skill-symbol">
+                                UI
+                            </div>
+
+                        </div>
+
+                        <p class="skill-category">
+                            FRONTEND
+                        </p>
+
+                        <h3>
+                            Interfaces & web
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                            <span>React</span>
+                            <span>JavaScript</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Backend -->
+
+                    <article class="skill-card reveal">
+
+                        <div class="skill-top">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div class="skill-symbol">
+                                API
+                            </div>
+
+                        </div>
+
+                        <p class="skill-category">
+                            BACKEND
+                        </p>
+
+                        <h3>
+                            Services & APIs
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>REST APIs</span>
+                            <span>JDBC</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- AI -->
+
+                    <article class="skill-card reveal">
+
+                        <div class="skill-top">
+
+                            <span>
+                                04
+                            </span>
+
+                            <div class="skill-symbol">
+                                AI
+                            </div>
+
+                        </div>
+
+                        <p class="skill-category">
+                            AI / ML
+                        </p>
+
+                        <h3>
+                            Intelligent systems
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>TensorFlow</span>
+                            <span>OpenCV</span>
+                            <span>Scikit-learn</span>
+                            <span>Grad-CAM</span>
+                            <span>Computer Vision</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Database -->
+
+                    <article class="skill-card reveal">
+
+                        <div class="skill-top">
+
+                            <span>
+                                05
+                            </span>
+
+                            <div class="skill-symbol">
+                                DB
+                            </div>
+
+                        </div>
+
+                        <p class="skill-category">
+                            DATABASE
+                        </p>
+
+                        <h3>
+                            Data & persistence
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>MySQL</span>
+                            <span>SQL</span>
+                            <span>JDBC</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Tools -->
+
+                    <article class="skill-card reveal">
+
+                        <div class="skill-top">
+
+                            <span>
+                                06
+                            </span>
+
+                            <div class="skill-symbol">
+                                DEV
+                            </div>
+
+                        </div>
+
+                        <p class="skill-category">
+                            TOOLS
+                        </p>
+
+                        <h3>
+                            Build & ship
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>VS Code</span>
+                            <span>Streamlit</span>
+                            <span>Render</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="concept-strip reveal">
+
+                    <span>
+                        CORE CONCEPTS
+                    </span>
+
+                    <div>
+                        <b>Data Structures & Algorithms</b>
+                        <b>Object-Oriented Programming</b>
+                        <b>Exception Handling</b>
+                        <b>Authentication</b>
+                        <b>REST Architecture</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section class="projects section" id="projects" data-nav-section="projects">
+
+            <div class="shell">
+
+                <div class="label reveal">
+                    <i></i>
+                    SELECTED WORK
+                </div>
+
+
+                <div class="projects-heading reveal">
+
+                    <div>
+
+                        <p class="section-index">
+                            03 / FEATURED PROJECTS
+                        </p>
+
+                        <h2>
+                            Built to learn.
+                            <span>
+                                Designed to matter.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Four projects representing the areas I enjoy
+                        most — AI, computer vision, full-stack web
+                        development and Java software engineering.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-list">
+
+
+                    <!-- PROJECT 01 -->
+
+                    <article class="project-card reveal" data-project="01">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+
+                        <div class="project-main">
+
+                            <p class="project-category">
+                                AI / DEEP LEARNING / XAI
+                            </p>
+
+                            <h3>
+                                Explainable Brain
+                                Tumor Detection
+                            </h3>
+
+                            <p>
+                                CNN-based MRI classification system
+                                designed to detect and classify brain
+                                tumors while making model predictions
+                                more interpretable through Explainable AI.
+                            </p>
+
+                            <div class="tags">
+
+                                <b>Python</b>
+                                <b>TensorFlow</b>
+                                <b>OpenCV</b>
+                                <b>Scikit-learn</b>
+                                <b>Grad-CAM</b>
+                                <b>Streamlit</b>
+
+                            </div>
+
+                            <span class="project-hint">Click anywhere to explore the case study <span>↗</span></span>
+
+                        </div>
+
+
+                        <div class="project-action">
+
+                            <span>
+                                EXPLORE
+                            </span>
+
+                            <div class="project-links">
+
+                                <a href="https://brain-mri-ai.streamlit.app/" target="_blank" rel="noopener noreferrer"
+                                    class="project-link demo-link">
+                                    Live Demo
+                                    <span>↗</span>
+                                </a>
+
+                                <a href="https://github.com/TanmayT134/Explainable-Brain-Tumor-Detection"
+                                    target="_blank" rel="noopener noreferrer" class="project-link">
+                                    GitHub
+                                    <span>↗</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 02 -->
+
+                    <article class="project-card reveal" data-project="02">
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+
+                        <div class="project-main">
+
+                            <p class="project-category">
+                                AI / COMPUTER VISION
+                            </p>
+
+                            <h3>
+                                DeepShield
+                            </h3>
+
+                            <p>
+                                End-to-end deepfake detection platform
+                                that analyzes video content using
+                                computer vision and deep learning to
+                                distinguish real media from AI-generated
+                                content.
+                            </p>
+
+                            <div class="tags">
+
+                                <b>Python</b>
+                                <b>EfficientNetB0</b>
+                                <b>MTCNN</b>
+                                <b>OpenCV</b>
+                                <b>Streamlit</b>
+                                <b>Computer Vision</b>
+
+                            </div>
+
+                            <span class="project-hint">Click anywhere to explore the case study <span>↗</span></span>
+
+                        </div>
+
+
+                        <div class="project-action">
+
+                            <span>
+                                EXPLORE
+                            </span>
+
+                            <div class="project-links">
+
+                                <a href="https://deepshield-cq6f.onrender.com/" target="_blank"
+                                    rel="noopener noreferrer" class="project-link demo-link">
+                                    Live Demo
+                                    <span>↗</span>
+                                </a>
+
+                                <a href="https://github.com/TanmayT134/DeepShield" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    GitHub
+                                    <span>↗</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 03 -->
+
+                    <article class="project-card reveal" data-project="03">
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+
+                        <div class="project-main">
+
+                            <p class="project-category">
+                                FULL-STACK / WEB DEVELOPMENT
+                            </p>
+
+                            <h3>
+                                EZStay
+                            </h3>
+
+                            <p>
+                                Full-stack accommodation booking platform
+                                with secure authentication, role-based
+                                authorization, city and stay management,
+                                REST APIs and MySQL-backed persistence.
+                            </p>
+
+                            <div class="tags">
+
+                                <b>React</b>
+                                <b>Node.js</b>
+                                <b>Express.js</b>
+                                <b>MySQL</b>
+                                <b>JWT</b>
+                                <b>Bootstrap</b>
+
+                            </div>
+
+                            <span class="project-hint">Click anywhere to explore the case study <span>↗</span></span>
+
+                        </div>
+
+
+                        <div class="project-action">
+
+                            <span>
+                                REPOSITORY
+                            </span>
+
+                            <div class="project-links">
+
+                                <a href="https://github.com/TanmayT134/EZStay" target="_blank" rel="noopener noreferrer"
+                                    class="project-link">
+                                    GitHub
+                                    <span>↗</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 04 -->
+
+                    <article class="project-card reveal" data-project="04">
+
+                        <div class="project-number">
+                            04
+                        </div>
+
+
+                        <div class="project-main">
+
+                            <p class="project-category">
+                                JAVA / DESKTOP / DATABASE
+                            </p>
+
+                            <h3>
+                                ATM Simulation System
+                            </h3>
+
+                            <p>
+                                Java Swing banking application with
+                                secure authentication, account operations,
+                                transaction handling and JDBC/MySQL
+                                persistence.
+                            </p>
+
+                            <div class="tags">
+
+                                <b>Java</b>
+                                <b>Swing</b>
+                                <b>JDBC</b>
+                                <b>MySQL</b>
+                                <b>OOP</b>
+
+                            </div>
+
+                            <span class="project-hint">Click anywhere to explore the case study <span>↗</span></span>
+
+                        </div>
+
+
+                        <div class="project-action">
+
+                            <span>
+                                REPOSITORY
+                            </span>
+
+                            <div class="project-links">
+
+                                <a href="https://github.com/TanmayT134/ATM-Simulation-System-using-Java" target="_blank"
+                                    rel="noopener noreferrer" class="project-link">
+                                    GitHub
+                                    <span>↗</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="projects-footer reveal">
+
+                    <p>
+                        More experiments, repositories and unfinished
+                        ideas live on GitHub.
+                    </p>
+
+                    <a class="github magnetic" href="https://github.com/TanmayT134" target="_blank"
+                        rel="noopener noreferrer">
+                        Explore GitHub
+
+                        <span>
+                            ↗
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+     CERTIFICATIONS
+================================================== -->
+
+        <section class="certifications section" id="certifications" data-nav-section="certifications">
+
+            <div class="shell">
+
+                <div class="label reveal">
+                    <i></i>
+                    CERTIFICATIONS
+                </div>
+
+
+                <div class="cert-heading reveal">
+
+                    <div>
+
+                        <p class="section-index">
+                            04 / CREDENTIALS
+                        </p>
+
+                        <h2 class="display">
+                            Proof of
+                            <span>
+                                continuous learning.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Certifications that complement my practical
+                        project experience across AI, cloud, databases
+                        and web development.
+                    </p>
+
+                </div>
+
+
+                <div class="certificate-grid">
+
+
+                    <!-- NVIDIA -->
+
+                    <article class="certificate-card featured reveal">
+
+                        <div class="certificate-top">
+
+                            <span class="certificate-number">
+                                01
+                            </span>
+
+                            <span class="certificate-status">
+                                VERIFIED
+                            </span>
+
+                        </div>
+
+                        <div class="certificate-logo nvidia">
+                            NVIDIA
+                        </div>
+
+                        <p class="certificate-type">
+                            DEEP LEARNING
+                        </p>
+
+                        <h3>
+                            Fundamentals of
+                            Deep Learning
+                        </h3>
+
+                        <p class="certificate-issuer">
+                            NVIDIA Deep Learning Institute
+                        </p>
+
+                        <div class="certificate-footer">
+
+                            <span>
+                                JAN 2026
+                            </span>
+
+                            <a href="https://learn.nvidia.com/certificates?id=ptSVONjcRg64i40RU4yD3w" target="_blank"
+                                rel="noopener noreferrer">
+                                View Credential
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- AWS -->
+
+                    <article class="certificate-card reveal">
+
+                        <div class="certificate-top">
+
+                            <span class="certificate-number">
+                                02
+                            </span>
+
+                            <span class="certificate-status">
+                                VERIFIED
+                            </span>
+
+                        </div>
+
+                        <div class="certificate-logo aws">
+                            AWS
+                        </div>
+
+                        <p class="certificate-type">
+                            CLOUD
+                        </p>
+
+                        <h3>
+                            AWS Cloud Quest:
+                            Cloud Practitioner
+                        </h3>
+
+                        <p class="certificate-issuer">
+                            Amazon Web Services
+                        </p>
+
+                        <div class="certificate-footer">
+
+                            <span>
+                                AUG 2025
+                            </span>
+
+                            <a href="https://www.credly.com/badges/1e5367fd-2a52-403d-b9e7-44d762b0ff18/public_url"
+                                target="_blank" rel="noopener noreferrer">
+                                View Credential
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MongoDB -->
+
+                    <article class="certificate-card reveal">
+
+                        <div class="certificate-top">
+
+                            <span class="certificate-number">
+                                03
+                            </span>
+
+                            <span class="certificate-status">
+                                VERIFIED
+                            </span>
+
+                        </div>
+
+                        <div class="certificate-logo mongo">
+                            MDB
+                        </div>
+
+                        <p class="certificate-type">
+                            DATABASE
+                        </p>
+
+                        <h3>
+                            Introduction to
+                            MongoDB
+                        </h3>
+
+                        <p class="certificate-issuer">
+                            MongoDB University
+                        </p>
+
+                        <div class="certificate-footer">
+
+                            <span>
+                                JUN 2025
+                            </span>
+
+                            <a href="https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/5a9338f5-2346-44d5-b06f-3c098e7be6b7-tanmay-tawade-33ad8f12-9974-4755-af1b-8f230ceafa38-certificate.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                View Certificate
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Internshala -->
+
+                    <article class="certificate-card reveal">
+
+                        <div class="certificate-top">
+
+                            <span class="certificate-number">
+                                04
+                            </span>
+
+                            <span class="certificate-status">
+                                VERIFIED
+                            </span>
+
+                        </div>
+
+                        <div class="certificate-logo internshala">
+                            IS
+                        </div>
+
+                        <p class="certificate-type">
+                            WEB DEVELOPMENT
+                        </p>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p class="certificate-issuer">
+                            Internshala Training
+                        </p>
+
+                        <div class="certificate-footer">
+
+                            <span>
+                                FEB 2025
+                            </span>
+
+                            <a href="https://trainings.internshala.com/s/v/3562517/89be5f59" target="_blank"
+                                rel="noopener noreferrer">
+                                View Certificate
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXPERIENCE
+        ================================================== -->
+
+        <section class="experience section" id="experience" data-nav-section="experience">
+
+            <div class="shell">
+
+                <div class="label reveal">
+                    <i></i>
+                    EXPERIENCE
+                </div>
+
+
+                <div class="experience-heading reveal">
+
+                    <div>
+
+                        <p class="section-index">
+                            04 / EXPERIENCE
+                        </p>
+
+                        <h2 class="display">
+                            Learning by
+                            <span>
+                                building in public.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <article class="item reveal">
+
+                        <small>
+                            FEB — MAR 2025
+                        </small>
+
+                        <i></i>
+
+                        <div>
+
+                            <span>
+                                WEB DEVELOPMENT INTERNSHIP
+                            </span>
+
+                            <h3>
+                                TechOctanet Services Pvt. Ltd.
+                            </h3>
+
+                            <p>
+                                Developed responsive web pages using
+                                HTML, CSS and Bootstrap. Built a
+                                JavaScript task management application
+                                with complete CRUD functionality and
+                                dynamic DOM manipulation while using
+                                Git and GitHub for version control.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item reveal">
+
+                        <small>
+                            2025 — NOW
+                        </small>
+
+                        <i></i>
+
+                        <div>
+
+                            <span>
+                                PERSONAL DEVELOPMENT
+                            </span>
+
+                            <h3>
+                                AI + Full-Stack Development
+                            </h3>
+
+                            <p>
+                                Building increasingly complex projects
+                                across artificial intelligence,
+                                computer vision, full-stack web
+                                development and Java software engineering.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- =================================================
+             BEYOND CODE
+        ================================================== -->
+
+        <section class="beyond section" id="beyond" data-nav-section="beyond">
+
+            <div class="shell">
+
+                <div class="label reveal">
+                    <i></i>
+                    BEYOND CODE
+                </div>
+
+                <div class="beyond-heading reveal">
+                    <div>
+                        <p class="section-index">
+                            06 / BEYOND THE SCREEN
+                        </p>
+
+                        <h2 class="display">
+                            The things that
+                            <span>shape how I build.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Technology is one part of the journey. Music, community and continuous learning keep me curious,
+                        grounded and moving forward.
+                    </p>
+                </div>
+
+                <div class="beyond-grid">
+
+                    <article class="beyond-card reveal">
+                        <div class="beyond-card-top">
+                            <span class="beyond-index">01</span>
+                            <span class="beyond-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M9 18V6l10-2v12" />
+                                    <circle cx="6" cy="18" r="3" />
+                                    <circle cx="16" cy="16" r="3" />
+                                </svg>
+                            </span>
+                        </div>
+                        <p class="beyond-category">MUSIC</p>
+                        <h3>Tabla Visharad</h3>
+                        <p class="beyond-copy">Years of disciplined practice through Tabla have taught me patience,
+                            rhythm, consistency and the value of mastering fundamentals before improvising.</p>
+                        <div class="beyond-footer"><span>DISCIPLINE / RHYTHM</span><span>↗</span></div>
+                    </article>
+
+                    <article class="beyond-card reveal">
+                        <div class="beyond-card-top">
+                            <span class="beyond-index">02</span>
+                            <span class="beyond-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M20 11.5a8 8 0 0 1-8 8H6l-3 2v-5.5a8 8 0 1 1 17-4.5Z" />
+                                    <path d="M8 11h.01M12 11h.01M16 11h.01" />
+                                </svg>
+                            </span>
+                        </div>
+                        <p class="beyond-category">COMMUNITY</p>
+                        <h3>Giving back</h3>
+                        <p class="beyond-copy">As a member of Shrimant Bhausaheb Rangari Ganpati Trust, Pune, I value
+                            community participation, service and contributing beyond my professional work.</p>
+                        <div class="beyond-footer"><span>COMMUNITY / SERVICE</span><span>↗</span></div>
+                    </article>
+
+                    <article class="beyond-card reveal">
+                        <div class="beyond-card-top">
+                            <span class="beyond-index">03</span>
+                            <span class="beyond-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
+                                    <path d="M8 6h8M8 10h8" />
+                                </svg>
+                            </span>
+                        </div>
+                        <p class="beyond-category">CONTINUOUS LEARNING</p>
+                        <h3>Always learning</h3>
+                        <p class="beyond-copy">I keep learning beyond projects — strengthening software engineering
+                            fundamentals, exploring system design and turning new concepts into things I can build.</p>
+                        <div class="beyond-footer"><span>CURIOSITY / GROWTH</span><span>↗</span></div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <section class="contact section" id="contact" data-nav-section="contact">
+
+            <div class="grid"></div>
+
+            <div class="contact-glow"></div>
+
+            <div class="shell">
+
+                <div class="label reveal">
+                    <i></i>
+                    CONTACT
+                </div>
+
+
+                <div class="contact-heading reveal">
+
+                    <p class="section-index">
+                        05 / LET'S CONNECT
+                    </p>
+
+                    <h2>
+                        Let's build
+                        <span>
+                            something meaningful.
+                        </span>
+                    </h2>
+
+                    <p class="contact-intro">
+                        Have an opportunity, project or idea worth
+                        discussing? Send me the details and I'll get
+                        back to you.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-layout">
+
+
+                    <!-- CONTACT FORM -->
+
+                    <div class="contact-form-wrap reveal">
+
+                        <div class="form-header">
+
+                            <span>
+                                SEND A MESSAGE
+                            </span>
+
+                            <small>
+                                I'll receive your details directly
+                                by email.
+                            </small>
+
+                        </div>
+
+
+                        <form id="contactForm" class="contact-form"
+                            action="https://formsubmit.co/ajax/tawade.tanmay134@gmail.com" method="POST">
+
+                            <input type="hidden" name="_subject" value="New Portfolio Contact — Tanmay Tawade">
+
+                            <input type="hidden" name="_template" value="table">
+
+                            <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off">
+
+
+                            <div class="form-row">
+
+                                <label>
+                                    <span>FULL NAME *</span>
+
+                                    <input type="text" name="name" placeholder="John Doe" autocomplete="name" required>
+                                </label>
+
+
+                                <label>
+                                    <span>EMAIL ADDRESS *</span>
+
+                                    <input type="email" name="email" placeholder="john@company.com" autocomplete="email"
+                                        required>
+                                </label>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <label>
+                                    <span>PHONE</span>
+
+                                    <input type="tel" name="phone" placeholder="+91 ..." autocomplete="tel">
+                                </label>
+
+
+                                <label>
+                                    <span>COMPANY / ORGANIZATION</span>
+
+                                    <input type="text" name="company" placeholder="Company name"
+                                        autocomplete="organization">
+                                </label>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <label>
+                                    <span>WHAT'S THIS ABOUT? *</span>
+
+                                    <select name="opportunity" required>
+                                        <option value="" selected disabled>
+                                            Select an option
+                                        </option>
+
+                                        <option value="Job Opportunity">
+                                            Job Opportunity
+                                        </option>
+
+                                        <option value="Internship Opportunity">
+                                            Internship Opportunity
+                                        </option>
+
+                                        <option value="Freelance / Project">
+                                            Freelance / Project
+                                        </option>
+
+                                        <option value="Collaboration">
+                                            Collaboration
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+
+                                    </select>
+                                </label>
+
+
+                                <label>
+                                    <span>SUBJECT *</span>
+
+                                    <input type="text" name="subject" placeholder="Let's discuss..." required>
+                                </label>
+
+                            </div>
+
+
+                            <label class="full-field">
+
+                                <span>MESSAGE *</span>
+
+                                <textarea name="message" rows="6"
+                                    placeholder="Tell me about the opportunity, project or idea..." required></textarea>
+
+                            </label>
+
+
+                            <div class="form-bottom">
+
+                                <p>
+                                    By submitting this form, your
+                                    details will be sent to my email.
+                                </p>
+
+
+                                <button class="submit-button magnetic" type="submit">
+
+                                    <span>
+                                        Send message
+                                    </span>
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M4 12h15" />
+                                        <path d="m13 6 6 6-6 6" />
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+
+                            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- CONTACT DETAILS -->
+
+                    <aside class="contact-side reveal">
+
+                        <div class="contact-side-block">
+
+                            <span>
+                                DIRECT EMAIL
+                            </span>
+
+                            <a href="mailto:tawade.tanmay134@gmail.com" class="email-link">
+                                tawade.tanmay134@gmail.com
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+
+                        <div class="contact-side-block">
+
+                            <span>
+                                SOCIAL
+                            </span>
+
+
+                            <div class="social-grid">
+
+
+                                <!-- GitHub -->
+
+                                <a href="https://github.com/TanmayT134" target="_blank" rel="noopener noreferrer"
+                                    class="social-link magnetic">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M9 19c-4 1.3-4-2-5-2m10 4v-3.9c0-1.1-.4-1.9-1-2.3 3.3-.4 6.8-1.6 6.8-7A5.5 5.5 0 0 0 18.3 4c.1-.4.4-1.9-.1-3.9 0 0-1.2-.4-4 1.5a13.8 13.8 0 0 0-7.2 0C4.2-.3 3 0 3 0c-.5 2-.2 3.5-.1 3.9A5.5 5.5 0 0 0 1.5 7.8c0 5.4 3.5 6.6 6.8 7-.6.5-1 1.3-1 2.6V21" />
+                                    </svg>
+
+                                    <span>
+                                        GitHub
+                                    </span>
+
+                                    <small>↗</small>
+
+                                </a>
+
+
+                                <!-- LinkedIn -->
+
+                                <a href="https://www.linkedin.com/in/tanmay-tawade-995829344/" target="_blank"
+                                    rel="noopener noreferrer" class="social-link magnetic">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M5 4v16" />
+                                        <path d="M5 8h.01" />
+                                        <path d="M9 10v10" />
+                                        <path d="M9 14a4 4 0 0 1 8 0v6" />
+                                        <path d="M17 14v6" />
+                                    </svg>
+
+                                    <span>
+                                        LinkedIn
+                                    </span>
+
+                                    <small>↗</small>
+
+                                </a>
+
+
+                                <!-- DEV -->
+
+                                <a href="https://dev.to/tanmayt134" target="_blank" rel="noopener noreferrer"
+                                    class="social-link magnetic">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M4 5h16v14H4z" />
+                                        <path d="M8 9v6" />
+                                        <path d="M8 9h2a2 2 0 0 1 0 4H8" />
+                                        <path d="M14 9h3" />
+                                        <path d="M14 9v6h3" />
+                                    </svg>
+
+                                    <span>
+                                        DEV
+                                    </span>
+
+                                    <small>↗</small>
+
+                                </a>
+
+
+                                <!-- HackerRank -->
+
+                                <a href="https://www.hackerrank.com/profile/TanmayT134" target="_blank"
+                                    rel="noopener noreferrer" class="social-link magnetic">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12 3 20 7.5v9L12 21l-8-4.5v-9L12 3Z" />
+                                        <path d="M8 10v5" />
+                                        <path d="M16 10v5" />
+                                        <path d="M8 12.5h8" />
+                                    </svg>
+
+                                    <span>
+                                        HackerRank
+                                    </span>
+
+                                    <small>↗</small>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="availability-card">
+
+                            <i></i>
+
+                            <div>
+
+                                <span>
+                                    CURRENT STATUS
+                                </span>
+
+                                <strong>
+                                    Open to opportunities
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+
+                <footer>
+
+                    <span>
+                        © 2026 TANMAY TAWADE
+                    </span>
+
+                    <span>
+                        AI / FULL-STACK / SOFTWARE
+                    </span>
+
+                    <span>
+                        BUILD / LEARN / REPEAT
+                    </span>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =================================================
+         PROJECT CASE STUDY MODAL
+    ================================================== -->
+
+    <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="projectModalTitle">
+        <div class="project-modal-backdrop" data-modal-close></div>
+
+        <div class="project-modal-dialog" role="document">
+            <button class="project-modal-close" type="button" aria-label="Close project details" data-modal-close>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="project-modal-scroll">
+                <div class="project-modal-head">
+                    <div>
+                        <p class="project-modal-kicker" id="projectModalKicker"></p>
+                        <h2 id="projectModalTitle"></h2>
+                        <p id="projectModalSummary"></p>
+                    </div>
+                    <div class="project-modal-number" id="projectModalNumber"></div>
+                </div>
+
+                <div class="project-modal-actions" id="projectModalActions"></div>
+
+                <div class="project-modal-grid">
+                    <section class="modal-panel modal-panel-wide">
+                        <span class="modal-label">OVERVIEW</span>
+                        <p id="projectModalOverview"></p>
+                    </section>
+
+                    <section class="modal-panel">
+                        <span class="modal-label">TECH STACK</span>
+                        <div class="modal-tags" id="projectModalStack"></div>
+                    </section>
+
+                    <section class="modal-panel">
+                        <span class="modal-label">KEY FEATURES</span>
+                        <ul class="modal-list" id="projectModalFeatures"></ul>
+                    </section>
+
+                    <section class="modal-panel modal-panel-wide">
+                        <span class="modal-label">SYSTEM / WORKFLOW</span>
+                        <div class="modal-flow" id="projectModalFlow"></div>
+                    </section>
+
+                    <section class="modal-panel" id="projectModalMetricsPanel">
+                        <span class="modal-label">PROJECT DETAILS</span>
+                        <div class="modal-metrics" id="projectModalMetrics"></div>
+                    </section>
+
+                    <section class="modal-panel">
+                        <span class="modal-label">NOTES</span>
+                        <p id="projectModalNotes"></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
