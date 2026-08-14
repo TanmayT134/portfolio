@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-tanmay-tawade.vercel.app/sitemap.xml

@@ -9,26 +9,114 @@
 }
 
 :root {
-    --bg: #050505;
-    --bg-soft: #080808;
-    --text: #f5f5f5;
-    --muted: rgba(255, 255, 255, 0.55);
-    --dim: rgba(255, 255, 255, 0.3);
+    --bg: #071014;
+    --bg-soft: #0A171C;
 
-    --cyan: #11c5f4;
-    --cyan-soft: rgba(17, 197, 244, 0.08);
+    --surface: #0D1B20;
+    --surface-soft: #102229;
 
-    --lime: #9cff00;
+    --text: #F3F7F8;
+    --muted: rgba(231, 243, 246, 0.68);
+    --dim: rgba(211, 229, 233, 0.42);
 
-    --border: rgba(255, 255, 255, 0.1);
-    --border-strong: rgba(255, 255, 255, 0.17);
+    --cyan: #11C5F4;
+    --cyan-soft: rgba(17, 197, 244, 0.10);
+
+    --lime: #9CFF00;
+
+    --border: rgba(174, 224, 235, 0.14);
+    --border-strong: rgba(174, 224, 235, 0.24);
 
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* =========================================================
+   GLOBAL SCROLL EXPERIENCE
+========================================================= */
+
 html {
     background: var(--bg);
-    scroll-behavior: auto;
+
+    scroll-behavior: smooth;
+
+    scrollbar-gutter: stable;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(17, 197, 244, 0.65) rgba(255, 255, 255, 0.035);
+}
+
+/* Chrome / Edge / Safari */
+
+html::-webkit-scrollbar {
+    width: 7px;
+}
+
+html::-webkit-scrollbar-track {
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.04);
+}
+
+html::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(180deg,
+            rgba(17, 197, 244, 0.9),
+            rgba(17, 197, 244, 0.45));
+
+    border-radius: 999px;
+
+    border:
+        2px solid var(--bg);
+
+    min-height: 70px;
+
+    box-shadow:
+        0 0 12px rgba(17, 197, 244, 0.18);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background:
+        linear-gradient(180deg,
+            #11c5f4,
+            rgba(17, 197, 244, 0.7));
+
+    box-shadow:
+        0 0 18px rgba(17, 197, 244, 0.35);
+}
+
+
+/* =========================================================
+   TOUCH SCROLLING
+========================================================= */
+
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    html {
+        scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+html {
+    background: var(--bg);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,9 +125,15 @@ body {
     margin: 0;
 
     background:
-        radial-gradient(circle at 50% -10%,
-            rgba(17, 197, 244, 0.025),
-            transparent 35%),
+        radial-gradient(circle at 15% 10%,
+            rgba(17, 197, 244, 0.08),
+            transparent 30%),
+        radial-gradient(circle at 85% 35%,
+            rgba(17, 197, 244, 0.045),
+            transparent 28%),
+        radial-gradient(circle at 50% 90%,
+            rgba(17, 197, 244, 0.035),
+            transparent 32%),
         var(--bg);
 
     color: var(--text);
@@ -6795,4 +6889,1053 @@ main,
 
 body.modal-open {
     overflow: hidden;
+}
+
+/* =========================================================
+   FINAL VISUAL REFINEMENT
+   Deep Graphite + Cyan Theme
+   ========================================================= */
+
+:root {
+    /* -----------------------------------------------------
+       BACKGROUND SYSTEM
+    ----------------------------------------------------- */
+
+    --bg: #0b0f12;
+    --bg-soft: #10161a;
+
+    --surface: #11181d;
+    --surface-soft: #151d22;
+    --surface-hover: #192229;
+
+    /* -----------------------------------------------------
+       TEXT
+    ----------------------------------------------------- */
+
+    --text: #f5f7f8;
+    --muted: rgba(235, 242, 245, 0.68);
+    --dim: rgba(210, 225, 232, 0.42);
+
+    /* -----------------------------------------------------
+       ACCENT
+    ----------------------------------------------------- */
+
+    --cyan: #11c5f4;
+    --cyan-soft: rgba(17, 197, 244, 0.08);
+
+    --lime: #9cff00;
+
+    /* -----------------------------------------------------
+       BORDERS
+    ----------------------------------------------------- */
+
+    --border: rgba(255, 255, 255, 0.09);
+    --border-strong: rgba(255, 255, 255, 0.16);
+
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* =========================================================
+   GLOBAL BACKGROUND
+   ========================================================= */
+
+html {
+    background: var(--bg);
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+
+    scrollbar-gutter: stable;
+
+    /* Firefox scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(17, 197, 244, 0.65) rgba(255, 255, 255, 0.035);
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% -12%,
+            rgba(17, 197, 244, 0.055),
+            transparent 32%),
+        radial-gradient(circle at 10% 45%,
+            rgba(38, 74, 91, 0.045),
+            transparent 30%),
+        radial-gradient(circle at 90% 70%,
+            rgba(20, 53, 69, 0.035),
+            transparent 32%),
+        var(--bg);
+
+    color: var(--text);
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+   ========================================================= */
+
+html::-webkit-scrollbar {
+    width: 7px;
+}
+
+html::-webkit-scrollbar-track {
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.035);
+}
+
+html::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(180deg,
+            rgba(17, 197, 244, 0.9),
+            rgba(17, 197, 244, 0.45));
+
+    border:
+        2px solid var(--bg);
+
+    border-radius: 999px;
+
+    min-height: 70px;
+
+    box-shadow:
+        0 0 12px rgba(17, 197, 244, 0.18);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background:
+        linear-gradient(180deg,
+            #11c5f4,
+            rgba(17, 197, 244, 0.7));
+
+    box-shadow:
+        0 0 18px rgba(17, 197, 244, 0.35);
+}
+
+
+/* =========================================================
+   NAVBAR — GRAPHITE GLASS
+   ========================================================= */
+
+.navbar {
+    background:
+        rgba(15, 21, 25, 0.76);
+
+    border-color:
+        rgba(255, 255, 255, 0.12);
+
+    backdrop-filter:
+        blur(22px) saturate(125%);
+
+    -webkit-backdrop-filter:
+        blur(22px) saturate(125%);
+
+    box-shadow:
+        0 12px 45px rgba(0, 0, 0, 0.18);
+}
+
+.navbar.scrolled {
+    background:
+        rgba(15, 21, 25, 0.9);
+
+    border-color:
+        rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    background:
+        radial-gradient(circle at 50% 36%,
+            rgba(17, 197, 244, 0.075),
+            transparent 27%),
+        radial-gradient(circle at 20% 72%,
+            rgba(43, 76, 91, 0.07),
+            transparent 30%),
+        radial-gradient(circle at 85% 20%,
+            rgba(17, 197, 244, 0.035),
+            transparent 28%),
+        var(--bg);
+}
+
+
+/* =========================================================
+   HERO GRID — SLIGHTLY MORE VISIBLE
+   ========================================================= */
+
+.hero::before {
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   ORBITAL AREA
+   ========================================================= */
+
+.orbit-wrap {
+    background:
+        radial-gradient(circle at center,
+            rgba(17, 197, 244, 0.035),
+            transparent 50%);
+}
+
+
+/* =========================================================
+   ORBIT CORE
+   ========================================================= */
+
+.core {
+    background:
+        radial-gradient(circle at 35% 20%,
+            #454b4f 0%,
+            #292f33 38%,
+            #171d20 68%,
+            #0b0f11 100%);
+
+    border-color:
+        rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 0 80px rgba(0, 190, 220, 0.1),
+        inset 0 0 45px rgba(255, 255, 255, 0.035);
+}
+
+
+/* =========================================================
+   ORBIT TECH CARDS
+   ========================================================= */
+
+.orbit-tech {
+    background:
+        rgba(18, 26, 31, 0.9);
+
+    border-color:
+        rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.orbit-tech:hover {
+    background:
+        rgba(24, 35, 41, 0.96);
+
+    border-color:
+        rgba(17, 197, 244, 0.3);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.28),
+        0 0 25px rgba(17, 197, 244, 0.08);
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+    background:
+        linear-gradient(180deg,
+            #0d1216 0%,
+            #0f1519 50%,
+            #0b1013 100%);
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skills {
+    background:
+        radial-gradient(circle at 75% 25%,
+            rgba(17, 197, 244, 0.045),
+            transparent 28%),
+        #090e11;
+}
+
+
+/* =========================================================
+   SKILL CARDS
+   ========================================================= */
+
+.skill-card {
+    background:
+        linear-gradient(145deg,
+            rgba(22, 30, 35, 0.94),
+            rgba(14, 20, 24, 0.96));
+
+    border-color:
+        rgba(255, 255, 255, 0.095);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.5s var(--ease),
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.5s var(--ease);
+}
+
+.skill-card:hover {
+    background:
+        linear-gradient(145deg,
+            rgba(27, 38, 44, 0.98),
+            rgba(16, 24, 29, 0.98));
+
+    border-color:
+        rgba(17, 197, 244, 0.2);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.22),
+        0 0 35px rgba(17, 197, 244, 0.045);
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.projects {
+    background:
+        radial-gradient(circle at 80% 20%,
+            rgba(17, 197, 244, 0.055),
+            transparent 30%),
+        linear-gradient(180deg,
+            #0d1317,
+            #10161a);
+}
+
+
+/* =========================================================
+   PROJECT CARDS
+   ========================================================= */
+
+.project-card {
+    border-color:
+        rgba(255, 255, 255, 0.1);
+
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.45s var(--ease),
+        padding 0.45s var(--ease);
+}
+
+.project-card:hover {
+    background:
+        linear-gradient(90deg,
+            rgba(17, 197, 244, 0.025),
+            rgba(255, 255, 255, 0.018),
+            transparent);
+
+    border-color:
+        rgba(17, 197, 244, 0.18);
+}
+
+
+/* =========================================================
+   PROJECT TAGS
+   ========================================================= */
+
+.tags b {
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border-color:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   CONCEPT STRIP
+   ========================================================= */
+
+.concept-strip {
+    background:
+        linear-gradient(90deg,
+            rgba(17, 197, 244, 0.025),
+            rgba(255, 255, 255, 0.012),
+            rgba(17, 197, 244, 0.025));
+
+    border-top-color:
+        rgba(255, 255, 255, 0.16);
+
+    border-bottom-color:
+        rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+
+.certifications {
+    background:
+        #0a0f12;
+}
+
+
+/* =========================================================
+   CERTIFICATE CARDS
+   ========================================================= */
+
+.certificate-card {
+    background:
+        linear-gradient(145deg,
+            rgba(21, 29, 34, 0.95),
+            rgba(13, 19, 23, 0.97));
+
+    border-color:
+        rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.14);
+}
+
+.certificate-card:hover {
+    border-color:
+        rgba(17, 197, 244, 0.22);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.22),
+        0 0 30px rgba(17, 197, 244, 0.04);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience {
+    background:
+        linear-gradient(180deg,
+            #0f1519 0%,
+            #0b1013 100%);
+}
+
+
+/* =========================================================
+   BEYOND CODE
+   ========================================================= */
+
+.beyond {
+    background:
+        radial-gradient(circle at 15% 35%,
+            rgba(17, 197, 244, 0.045),
+            transparent 30%),
+        #090e11;
+}
+
+
+/* =========================================================
+   BEYOND CODE CARDS
+   ========================================================= */
+
+.beyond-card {
+    background:
+        linear-gradient(145deg,
+            rgba(21, 29, 34, 0.96),
+            rgba(13, 19, 23, 0.98));
+
+    border-color:
+        rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.5s var(--ease),
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.5s var(--ease);
+}
+
+.beyond-card:hover {
+    background:
+        linear-gradient(145deg,
+            rgba(28, 39, 45, 0.98),
+            rgba(15, 23, 28, 0.98));
+
+    border-color:
+        rgba(17, 197, 244, 0.22);
+
+    box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.24),
+        0 0 30px rgba(17, 197, 244, 0.045);
+}
+
+
+/* =========================================================
+   BEYOND CODE ICONS
+   ========================================================= */
+
+.beyond-icon {
+    background:
+        rgba(17, 197, 244, 0.055);
+
+    border-color:
+        rgba(17, 197, 244, 0.18);
+
+    box-shadow:
+        0 0 25px rgba(17, 197, 244, 0.05);
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+    background:
+        radial-gradient(circle at 50% 20%,
+            rgba(17, 197, 244, 0.045),
+            transparent 32%),
+        #0d1317;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-form-wrap {
+    background:
+        linear-gradient(145deg,
+            rgba(20, 28, 33, 0.96),
+            rgba(13, 19, 23, 0.98));
+
+    border-color:
+        rgba(255, 255, 255, 0.11);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border-color:
+        rgba(255, 255, 255, 0.09);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    background:
+        rgba(17, 197, 244, 0.025);
+
+    border-color:
+        rgba(17, 197, 244, 0.35);
+
+    box-shadow:
+        0 0 0 3px rgba(17, 197, 244, 0.055);
+}
+
+
+/* =========================================================
+   SOCIAL CARDS
+   ========================================================= */
+
+.social-link {
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border-color:
+        rgba(255, 255, 255, 0.08);
+}
+
+.social-link:hover {
+    background:
+        rgba(17, 197, 244, 0.045);
+
+    border-color:
+        rgba(17, 197, 244, 0.2);
+}
+
+
+/* =========================================================
+   PAGE PROGRESS
+   ========================================================= */
+
+.page-progress span {
+    background:
+        linear-gradient(180deg,
+            #11c5f4,
+            rgba(17, 197, 244, 0.45));
+
+    box-shadow:
+        0 0 10px rgba(17, 197, 244, 0.3);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    html {
+        scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        background:
+            radial-gradient(circle at 50% 0%,
+                rgba(17, 197, 244, 0.045),
+                transparent 30%),
+            var(--bg);
+    }
+
+    .navbar {
+        background:
+            rgba(15, 21, 25, 0.84);
+
+        backdrop-filter:
+            blur(18px) saturate(120%);
+
+        -webkit-backdrop-filter:
+            blur(18px) saturate(120%);
+    }
+
+    .skill-card,
+    .certificate-card,
+    .beyond-card,
+    .contact-form-wrap {
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.14);
+    }
+
+}
+
+/* =========================================================
+   ABOUT — PROFESSIONAL PHOTO
+========================================================= */
+
+.about-photo {
+    position: relative;
+    margin-bottom: 55px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .11);
+    background: linear-gradient(145deg, rgba(22, 30, 35, .95), rgba(10, 15, 18, .98));
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .24);
+}
+
+.about-photo picture,
+.about-photo img {
+    display: block;
+    width: 100%;
+}
+
+.about-photo img {
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(.78) contrast(1.04);
+    transition: transform .8s var(--ease), filter .6s ease;
+}
+
+.about-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 45%, rgba(5, 8, 10, .88) 100%);
+    pointer-events: none;
+}
+
+.about-photo:hover img {
+    transform: scale(1.025);
+    filter: saturate(.95) contrast(1.04);
+}
+
+.about-photo-meta {
+    position: absolute;
+    z-index: 2;
+    left: 22px;
+    right: 22px;
+    bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.about-photo-meta span {
+    color: rgba(255, 255, 255, .46);
+    font-family: "DM Mono", monospace;
+    font-size: 7px;
+    letter-spacing: .22em;
+}
+
+.about-photo-meta strong {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: -.035em;
+}
+
+.certificate-card {
+    cursor: pointer;
+}
+
+.certificate-card:focus-visible,
+.beyond-card:focus-visible {
+    outline: 1px solid var(--cyan);
+    outline-offset: 5px;
+}
+
+.certificate-explore-hint {
+    display: none !important;
+}
+
+.certificate-card:hover .certificate-explore-hint {
+    display: inline-block !important;
+    color: var(--cyan);
+}
+
+/* =========================================================
+   DETAIL MODALS — CERTIFICATES + BEYOND CODE
+========================================================= */
+
+.detail-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 5100;
+    display: grid;
+    place-items: center;
+    padding: clamp(14px, 3vw, 40px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .45s ease, visibility .45s ease;
+}
+
+.detail-modal.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.detail-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .78);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.detail-modal-dialog {
+    position: relative;
+    z-index: 2;
+    width: min(940px, 100%);
+    max-height: min(88dvh, 900px);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: linear-gradient(145deg, rgba(15, 20, 23, .99), rgba(7, 10, 12, .995));
+    box-shadow: 0 40px 120px rgba(0, 0, 0, .6);
+    transform: translateY(24px) scale(.985);
+    transition: transform .55s var(--ease);
+}
+
+.detail-modal.open .detail-modal-dialog {
+    transform: translateY(0) scale(1);
+}
+
+.detail-modal-scroll {
+    max-height: min(88dvh, 900px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(17, 197, 244, .45) transparent;
+}
+
+.detail-modal-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.detail-modal-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.detail-modal-scroll::-webkit-scrollbar-thumb {
+    background: rgba(17, 197, 244, .32);
+    border-radius: 99px;
+}
+
+.detail-modal-close {
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(5, 8, 10, .78);
+    color: #fff;
+    cursor: pointer;
+    transition: transform .35s var(--ease), border-color .3s ease, background .3s ease;
+}
+
+.detail-modal-close:hover {
+    transform: rotate(90deg);
+    border-color: rgba(17, 197, 244, .45);
+    background: rgba(17, 197, 244, .08);
+}
+
+.detail-modal-close span {
+    position: absolute;
+    width: 17px;
+    height: 1px;
+    background: currentColor;
+}
+
+.detail-modal-close span:first-child {
+    transform: rotate(45deg);
+}
+
+.detail-modal-close span:last-child {
+    transform: rotate(-45deg);
+}
+
+.detail-modal-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 80px;
+    gap: 30px;
+    padding: clamp(34px, 5vw, 62px);
+    padding-right: clamp(70px, 8vw, 110px);
+    border-bottom: 1px solid rgba(255, 255, 255, .09);
+    background: radial-gradient(circle at 80% 10%, rgba(17, 197, 244, .08), transparent 35%);
+}
+
+.detail-modal-kicker,
+.detail-modal-number,
+.detail-modal-label {
+    font-family: "DM Mono", monospace;
+}
+
+.detail-modal-kicker {
+    color: var(--cyan);
+    font-size: 9px;
+    letter-spacing: .28em;
+}
+
+.detail-modal-head h2 {
+    margin-top: 15px;
+    max-width: 760px;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: .92;
+    letter-spacing: -.065em;
+}
+
+.detail-modal-head>div:first-child>p:last-child {
+    max-width: 720px;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, .48);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.detail-modal-number {
+    justify-self: end;
+    color: rgba(255, 255, 255, .18);
+    font-size: 10px;
+    letter-spacing: .2em;
+    padding-top: 4px;
+}
+
+.detail-modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 24px clamp(34px, 5vw, 62px);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.detail-modal-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 0 18px;
+    border: 1px solid rgba(17, 197, 244, .26);
+    background: rgba(17, 197, 244, .07);
+    color: var(--cyan);
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    transition: transform .35s var(--ease), border-color .3s ease, background .3s ease;
+}
+
+.detail-modal-action:hover {
+    transform: translateY(-2px);
+    border-color: rgba(17, 197, 244, .5);
+    background: rgba(17, 197, 244, .11);
+}
+
+.detail-modal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: rgba(255, 255, 255, .08);
+}
+
+.detail-panel {
+    min-width: 0;
+    padding: 32px;
+    background: #0a0f12;
+}
+
+.detail-panel-wide {
+    grid-column: 1 / -1;
+}
+
+.detail-modal-label {
+    display: block;
+    margin-bottom: 17px;
+    color: rgba(255, 255, 255, .3);
+    font-size: 8px;
+    letter-spacing: .24em;
+}
+
+.detail-panel>p {
+    color: rgba(255, 255, 255, .5);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.detail-panel>strong {
+    color: rgba(255, 255, 255, .82);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.detail-tags span {
+    padding: 8px 10px;
+    border: 1px solid rgba(17, 197, 244, .18);
+    background: rgba(17, 197, 244, .035);
+    color: rgba(255, 255, 255, .65);
+    font-family: "DM Mono", monospace;
+    font-size: 7px;
+    letter-spacing: .1em;
+}
+
+@media (max-width: 640px) {
+    .about-photo {
+        margin-bottom: 36px;
+    }
+
+    .about-photo-meta {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .detail-modal {
+        padding: 0;
+    }
+
+    .detail-modal-dialog,
+    .detail-modal-scroll {
+        width: 100%;
+        max-width: none;
+        height: 100dvh;
+        max-height: 100dvh;
+    }
+
+    .detail-modal-dialog {
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .detail-modal-head {
+        padding: 76px 20px 28px;
+        grid-template-columns: minmax(0, 1fr) 50px;
+        gap: 18px;
+    }
+
+    .detail-modal-head h2 {
+        font-size: clamp(38px, 11vw, 58px);
+    }
+
+    .detail-modal-head>div:first-child>p:last-child {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .detail-modal-number {
+        font-size: 8px;
+    }
+
+    .detail-modal-actions {
+        padding: 16px 20px;
+    }
+
+    .detail-modal-action {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .detail-panel {
+        padding: 24px 20px;
+    }
+
+    .detail-modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-panel-wide {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 420px) {
+    .about-photo-meta strong {
+        font-size: 16px;
+    }
+
+    .detail-modal-close {
+        top: 14px;
+        right: 14px;
+        width: 42px;
+        height: 42px;
+    }
 }
