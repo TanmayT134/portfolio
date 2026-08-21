@@ -362,18 +362,21 @@
             setTimeout(
               () => {
 
+                /*
+                 * Remove the loading screen.
+                 */
                 loader.remove();
 
+                /*
+                 * Restore normal page state.
+                 */
                 document.body.classList.remove(
                   "is-loading"
                 );
 
                 /*
-                 * Safety cleanup in case
-                 * another class prevented
-                 * scrolling from restoring.
+                 * Restore normal scrolling.
                  */
-
                 document.documentElement.style
                   .removeProperty(
                     "overflow"
@@ -383,6 +386,31 @@
                   .removeProperty(
                     "overflow"
                   );
+
+                /*
+                 * IMPORTANT:
+                 * Remove all temporary loading
+                 * interaction blockers.
+                 */
+                window.removeEventListener(
+                  "wheel",
+                  preventLoadingScroll
+                );
+
+                window.removeEventListener(
+                  "touchmove",
+                  preventLoadingScroll
+                );
+
+                window.removeEventListener(
+                  "keydown",
+                  preventLoadingKeys
+                );
+
+                window.removeEventListener(
+                  "dragstart",
+                  preventLoadingDrag
+                );
 
               },
               1000
