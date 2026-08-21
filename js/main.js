@@ -30,6 +30,62 @@
   }
 
   /*
+   * LOCK PAGE INTERACTION WHILE LOADING
+   */
+  document.body.classList.add(
+    "is-loading"
+  );
+
+  const blockedKeys = new Set([
+    " ",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "PageUp",
+    "PageDown",
+    "Home",
+    "End"
+  ]);
+
+  const preventLoadingScroll = (event) => {
+    event.preventDefault();
+  };
+
+  const preventLoadingKeys = (event) => {
+    if (blockedKeys.has(event.key)) {
+      event.preventDefault();
+    }
+  };
+
+  const preventLoadingDrag = (event) => {
+    event.preventDefault();
+  };
+
+  window.addEventListener(
+    "wheel",
+    preventLoadingScroll,
+    { passive: false }
+  );
+
+  window.addEventListener(
+    "touchmove",
+    preventLoadingScroll,
+    { passive: false }
+  );
+
+  window.addEventListener(
+    "keydown",
+    preventLoadingKeys,
+    { passive: false }
+  );
+
+  window.addEventListener(
+    "dragstart",
+    preventLoadingDrag
+  );
+
+  /*
    * Minimum amount of time the loader
    * should remain visible.
    *
